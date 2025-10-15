@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class Rotation : MonoBehaviour
         initialRotation = transform.rotation;
         targetRotation = initialRotation * Quaternion.Euler(0, 0, 180);
 
-        // Starta rotationssekvensen
+        // Starta rotationssekvensen - Kommentera om du inte vill ha rotation
         StartCoroutine(RotateSequence());
     }
 
@@ -31,7 +32,7 @@ public class Rotation : MonoBehaviour
             // Rotera tillbaka till ursprungsläget
             yield return StartCoroutine(RotateOverTime(initialRotation, 1f));
 
-            // Vänta i 5 sekunder innan nästa iteration
+            // Vänta i 5 sekunder innan nästa omgång
             yield return new WaitForSeconds(5f);
         }
     }

@@ -47,7 +47,7 @@ public class Vision : MonoBehaviour
         {
             if(angle > -45 && angle < 45)
             {
-                Debug.Log("Ser spelaren med angle: " + angle);
+                //Debug.Log("Ser spelaren med angle: " + angle);
                 GetComponent<ray>().CheckVision();
             }
         }

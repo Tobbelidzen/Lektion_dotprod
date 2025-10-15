@@ -27,6 +27,6 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         // Applicera kraft baserat på input
-        rb.velocity = movement * speed;
+        rb.linearVelocity = movement * speed;
     }
 }
